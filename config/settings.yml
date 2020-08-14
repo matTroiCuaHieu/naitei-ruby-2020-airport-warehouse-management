@@ -1,0 +1,3 @@
+validate:
+  user:
+    password_minlength: 6
