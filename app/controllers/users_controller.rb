@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   before_action :find_user, only: :show
 
   def index
-    @users = User.page(params[:page]).per Settings.pagination
+    @users = User.page(params[:page]).per Settings.pagination.user_page
+    @page = params[:page].nil? ? Settings.pagination.default_page : params[:page].to_i
   end
 
   def show
@@ -32,12 +33,15 @@ class UsersController < ApplicationController
 
   def destroy
     if User.find_by(id: params[:id])&.destroy
-      flash[:success] = t ".alert.user_deleted"
     else
       flash[:error] = t ".alert.user_not_found"
     end
 
-    redirect_to users_url
+    respond_to do |format|
+      flash.now[:success] = t ".alert.user_deleted"
+      format.html{redirect_to users_url}
+      format.js {}
+    end
   end
 
   private

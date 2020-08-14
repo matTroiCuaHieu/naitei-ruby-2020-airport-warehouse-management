@@ -22,7 +22,9 @@ boolean:
   false: 0
 avatar :
   change_link: "https://gravatar.com/emails"
-pagination: 15
+pagination:
+  default_page: 1
+  user_page: 15
 validate:
   user:
     password_minlength: 6

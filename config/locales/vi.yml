@@ -63,12 +63,11 @@ vi:
       user_not_found: Không tìm thấy người dùng!
     index:
       title: Danh sách người dùng
-      orderID: Order ID
+      userID: User ID
       name: Tên
       location: Khu
       roll: Role
       action: Xóa
-    user:
       you_sure: Bạn có chắc chắn xóa?
       admin: Admin
       manager: Quản lí

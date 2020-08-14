@@ -63,16 +63,19 @@ en:
       user_not_found: User not found!
     index:
       title: All users
-      orderID: Order ID
+      userID: User ID
+      id: ID
       name: Name
       location: Location
       roll: Role
       action: Delete
-    user:
       you_sure: You sure?
       admin: Admin
       manager: Manager
       employee: Employee
+      delete: Delete
+    table:
+      you_sure: You sure?
       delete: Delete
   shared:
     the_form_contains:  The form contains

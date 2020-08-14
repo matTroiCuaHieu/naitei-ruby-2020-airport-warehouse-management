@@ -1,16 +1,46 @@
 <% provide :title, t(".title") %>
 <h1><%= t ".title"%></h1>
+  <div id="success">
+    <%= render :partial => "shared/flash_toastr" , :locals => { :flash => flash } %>
+  </div>
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col"><%= t ".orderID" %></th>
+      <th scope="col"><%= t ".id" %></th>
       <th scope="col"><%= t ".name" %></th>
       <th scope="col"><%= t ".location" %></th>
       <th scope="col"><%= t ".roll" %></th>
       <th scope="col"><%= t ".action" %></th>
     </tr>
   </thead>
-
-  <%= render @users%>
+  <% @users.each_with_index do |user, index|%>
+    <tbody>
+      <tr>
+        <td class ="user_index"><%= index + 1 + (@page - 1)*Settings.pagination.user_page %></td>
+        <td><%= link_to user.name, user %></td>
+        <td><%= user.warehouse_name %></td>
+        <td>
+          <% if user.admin? %>
+            <span class="badge badge-admin"><%= t ".admin" %></span>
+          <% elsif user.manager? %>
+            <span class="badge badge-manager"><%= t ".manager" %></span>
+          <% else %>
+            <span class="badge badge-employee"><%= t ".employee" %></span>
+          <% end %>
+        </td>
+        <td style = "padding-left: 25px">
+          <% if current_user.admin? && !current_user?(user) %>
+            <%= link_to user, method: :delete, data: { confirm: t(".you_sure") }, :remote => "true", :class => 'user_delete' do %>
+              <i class="fas fa-trash-alt fa-1x "data-toggle="tooltip" data-html="true" title=<%= t(".delete")%>></i>
+            <% end %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  <% end %>
 </table>
-<%= paginate @users, theme: "twitter-bootstrap-4" %>
+<div class="card-footer clearfix">
+  <ul class="pagination pagination-sm m-0 float-right">
+    <%= paginate @users, theme: "twitter-bootstrap-4" %>
+  </ul>
+</div>
