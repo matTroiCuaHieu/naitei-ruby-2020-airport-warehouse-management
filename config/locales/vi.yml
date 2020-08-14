@@ -1,0 +1,5 @@
+vi:
+  title: "Ứng Dụng Mẫu cho Hướng đẫn Ruby on Rails"
+  static_pages:
+    home: 
+      hello: "Xin chao"

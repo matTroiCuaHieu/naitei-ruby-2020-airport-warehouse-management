@@ -1,0 +1,18 @@
+<title><%= full_title yield :title %></title>
+<footer class="footer">
+  <small>
+    <%= t(".content1_html", href: link_to(t(".href_title1"), Settings.link.railstutorial.home)) %>
+    <%= t(".content2_html", href: link_to(t(".href_title2"), Settings.link.railstutorial.home)) %>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("static_pages.about.title"), "#" %></li>
+      <li><%= link_to t("static_pages.contact.title"), "#" %></li>
+      <li><%= link_to t(".new"), Settings.link.railstutorial.home %></li>
+    </ul>
+    <ul>
+      <%= link_to t(".english"), locale: :en %>
+      <%= link_to t(".vietnamese"), locale: :vi %>
+    </ul>
+  </nav>
+</footer>
