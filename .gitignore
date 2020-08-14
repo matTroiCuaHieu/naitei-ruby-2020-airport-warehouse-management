@@ -35,3 +35,11 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+spec/*
+!spec/rails_helper.rb
+!spec/spec_helper.rb
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
