@@ -1,0 +1,17 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title"%></h1>
+<table class="table table-hover">
+	<thead>
+    <tr>
+      <th scope="col"><%= t ".OrderID" %></th>
+      <th scope="col"><%= t ".Name" %></th>
+      <th scope="col"><%= t ".Location" %></th>
+      <th scope="col"><%= t ".Roll" %></th>
+      <th scope="col"><%= t ".Action" %></th>
+    </tr>
+  </thead>
+
+    <%= render @users%>
+
+  <%= paginate @users, theme: "twitter-bootstrap-4" %>
+</table>

@@ -1,33 +1,73 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  title: Warehouse System
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  layouts:
+    application:
+      title: Airport Warehouse System
+    header:
+      sample_app: Airport Warehouse System
+      users: Users
+      account_html: Account <b class="caret"></b>
+      profile: Profile
+      settings: Settings
+      logout: Log out
+    footer:
+      content1_html: The %{href}
+      href_title1: "Airport Warehouse System"
+      content2_html: by %{href}
+      href_title2: "Machael Hartl"
+      new: News
+      english: English
+      vietnamese: Vietnamese
+  static_pages:
+    home:
+      title: Home
+      content_html: This is the home page for the %{href} sample application.
+      href_title: Ruby on Rails Tutorial
+      sign_up: Sign up now!
+  users:
+    sign_in: Sign In
+    new:
+      title: Sign Up
+      content: This will be a signup page for new users.
+      create_account: Create my account
+    edit:
+      title: Edit
+      update_your_profile: Update your profile
+      save_changes: Save changes
+      change: Change
+    form:
+      name: Name
+      email: Email
+      password: Password
+      password_confirmation: Password confirmation
+    alert:
+      profile_updated: Profile updated!
+      please_login: Please log in!
+      user_deleted: User deleted!
+      profile_update_failed: Profile update failed!
+      user_not_found: User not found!
+    index:
+      title: All users
+  shared:
+    the_form_contains:  The form contains
+    error: errors
+    welcome_to_the_sample_app: Welcome to the Sample App!
+    error_signup: Sign up error!
+  sessions:
+    new:
+      title: Log in
+      login: Log in
+      new_user: New user?
+      signup_now: Sign up now!
+      email: Email
+      password: Password
+      error_email_password_invalid: Invalid email/password combination
+      remember_me: Remember me on this computer
+      login_successfully: Login successfully!
