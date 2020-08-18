@@ -1,5 +1,5 @@
-en:
-  title: Warehouse System
+vi:
+  title: Hệ thống quản lý kho máy bay
   views:
     pagination:
       first: "&laquo; First"
@@ -13,10 +13,10 @@ en:
     header:
       warehouse: Airport Warehouse System
       home: Home
-      users: Users 
+      users: Users
       account_html: Account <b class="caret"></b>
-      locations: Locations
-      planes: Planes
+      locations: Vị trí Ô
+      planes: Máy bay
       profile: Profile
       settings: Settings
       logout: Log out
@@ -61,7 +61,7 @@ en:
   shared:
     the_form_contains:  The form contains
     error: errors
-    welcome_to_the_sample_app: Welcome to the Warehouse Management System!
+    welcome_to_the_sample_app: Welcome to the Sample App!
     error_signup: Sign up error!
   sessions:
     new:
@@ -71,6 +71,6 @@ en:
       signup_now: Sign up now!
       email : Email
       password: Password
-      error_email_password_invalid: Invalid email/password!
+      error_email_password_invalid: Invalid email/password combination
       remember_me: Remember me on this computer
       login_successfully: Login successfully!

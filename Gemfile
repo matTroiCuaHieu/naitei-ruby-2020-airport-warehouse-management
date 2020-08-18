@@ -11,8 +11,15 @@ gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 
+gem "autoprefixer-rails"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "bootstrap4-kaminari-views", "~> 1.0.1"
+gem "bootstrap-sass", "3.4.1"
 gem "config"
+gem "jquery-rails", "4.3.1"
+gem "kaminari", "~> 1.2.1"
+gem "rails-i18n"
+gem "toastr-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
