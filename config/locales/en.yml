@@ -71,6 +71,6 @@ en:
       signup_now: Sign up now!
       email : Email
       password: Password
-      error_email_password_invalid: Invalid email/password combination
+      error_email_password_invalid: Invalid email/password!
       remember_me: Remember me on this computer
       login_successfully: Login successfully!

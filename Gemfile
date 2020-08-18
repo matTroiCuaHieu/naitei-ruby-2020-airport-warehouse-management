@@ -19,6 +19,7 @@ gem "config"
 gem "jquery-rails", "4.3.1"
 gem "kaminari", "~> 1.2.1"
 gem "rails-i18n"
+gem "toastr-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
