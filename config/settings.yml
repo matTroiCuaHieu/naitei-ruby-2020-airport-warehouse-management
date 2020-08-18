@@ -1,3 +1,28 @@
+links:
+  rail_tutorial_link: "https://www.railstutorial.org/"
+  rail_tutorial_book_link: "https://www.railstutorial.org/book"
+  rail_tutorial_help_link: "https://www.railstutorial.org/help"
+  rail_tutorial_contact_link: "https://www.railstutorial.org/contact"
+  learn_enough_link: "https://www.learnenough.com/"
+  screen_cast_link: "https://screencasts.railstutorial.org/"
+  rails_home_page_link: "https://rubyonrails.org/"
+  michaelhartl: "https://www.michaelhartl.com/"
+  rails_new: "https://news.railstutorial.org/"
+image:
+  rails:
+    width: "200px"
+user:
+  username_maximum: 50
+  email_maximum : 255
+  email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  password_minimum: 6
+avatar_size : 80
+boolean:
+  true: 1
+  false: 0
+avatar :
+  change_link: "https://gravatar.com/emails"
+pagination: 15
 validate:
   user:
     password_minlength: 6
