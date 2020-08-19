@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 import "bootstrap"
-
+require("./locations/location")
 import toastr from 'toastr'
 window.toastr = toastr
 

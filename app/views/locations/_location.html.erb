@@ -1,0 +1,18 @@
+ <tbody>
+  <tr>
+    <td><%= link_to "Number #{location.id}", "#" %></td>
+    <td><%= location.warehouse_name %></td>
+    <% if location.filled && location.schedules %>
+      <td><%=t ".filled" %></td>
+      <td><%= link_to location.schedules.last.plane_code, "#" %></td>
+    <% else %>
+      <td><%=t ".empty" %></td>
+      <td><%=t ".empty" %></td>
+    <% end %>
+    <td>
+      <%= link_to "#" do %>
+        <i class="fas fa-calendar-plus fa-2x" data-toggle="tooltip" data-placement = "top" title= <%=t(".title")%>></i>
+      <% end %>
+    </td>
+  </tr>
+</tbody>
