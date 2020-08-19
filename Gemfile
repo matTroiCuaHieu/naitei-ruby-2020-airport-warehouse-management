@@ -3,6 +3,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 gem "bcrypt"
 gem "faker", "2.1.2"
+gem "font-awesome-sass"
 gem "jbuilder", "~> 2.7"
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"

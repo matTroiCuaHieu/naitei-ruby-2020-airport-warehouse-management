@@ -31,8 +31,6 @@ en:
   static_pages:
     home:
       title: Home
-      content_html: This is the home page for the %{href} sample application.
-      href_title: Ruby on Rails Tutorial
       sign_up: Sign up now!
   users:
     sign_in: Sign In
@@ -40,11 +38,6 @@ en:
       title: Sign Up
       content: This will be a signup page for new users.
       create_account: Create my account
-    edit:
-      title: Edit
-      update_your_profile: Update your profile
-      save_changes: Save changes
-      change: Change
     form:
       name: Name
       email : Email
@@ -58,6 +51,17 @@ en:
       user_not_found: User not found!
     index:
       title: All users
+      orderID: Order ID
+      name: Name
+      location: Location
+      roll: Roll
+      action: Delete
+    user:
+      you_sure: You sure?
+      admin: Admin
+      manager: Manager
+      employee: Employee
+      delete: Delete
   shared:
     the_form_contains:  The form contains
     error: errors
@@ -74,3 +78,16 @@ en:
       error_email_password_invalid: Invalid email/password!
       remember_me: Remember me on this computer
       login_successfully: Login successfully!
+  locations:
+    index:
+      title: Location
+      order: Order
+      warehouse_name: Warehouse's Name
+      status: Status
+      plane: Plane
+      action: Action
+    location:
+      filled: Filled
+      empty: Empty
+      request: Request
+      title: "Request_to_change_status"

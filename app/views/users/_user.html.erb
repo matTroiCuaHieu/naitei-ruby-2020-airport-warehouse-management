@@ -1,0 +1,23 @@
+<tbody>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= link_to user.name, user %></td>
+    <td><%= user.warehouse_name %></td>
+    <td>
+      <% if user.admin? %>
+        <span class="badge badge-admin"><%= t ".admin" %></span>
+      <% elsif user.manager? %>
+        <span class="badge badge-manager"><%= t ".manager" %></span>
+      <% else %>
+        <span class="badge badge-employee"><%= t ".employee" %></span>
+      <% end %>
+    </td>
+    <td style = "padding-left: 25px">
+      <% if current_user.admin? && !current_user?(user) %>
+        <%= link_to user, method: :delete, data: { confirm: t(".you_sure") } do %>
+          <i class="fas fa-trash-alt fa-1x "data-toggle="tooltip" data-html="true" title=<%= t(".delete")%>></i>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+</tbody>

@@ -173,11 +173,13 @@ input {
   border-bottom: 1px solid $gray-lighter;
   }
 }
-/* Table*/
-#table td {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
+/* Roll*/
+.badge-admin {
+  background-color: $success
+}
+.badge-manager {
+  background-color: $danger
+}
+.badge-employee{
+  background-color: $primary
 }
