@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: {minimum: Settings.validate.user.password_minlength},
     allow_nil: true
 
+  delegate :name, to: :warehouse, prefix: true, allow_nil: true
+
   has_secure_password
 
   class << self

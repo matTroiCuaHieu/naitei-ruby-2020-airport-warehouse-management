@@ -13,6 +13,10 @@ require("./locations/location")
 import toastr from 'toastr'
 window.toastr = toastr
 
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+
 //= require jquery
 //= require jquery_ujs
 //= require toastr
