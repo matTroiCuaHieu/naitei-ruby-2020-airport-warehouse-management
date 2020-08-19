@@ -10,11 +10,13 @@ require("channels")
 require("jquery")
 import "bootstrap"
 require("./locations/location")
+import "./planes/plane"
+
 import toastr from 'toastr'
 window.toastr = toastr
 
 $(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 //= require jquery

@@ -6,7 +6,7 @@
         <li><%= link_to t(".home"), root_path %></li>
         <li><%= link_to t(".users"), users_path %></li>
         <li><%= link_to t(".locations"), locations_path %></li>
-        <li><%= link_to t(".planes"), "#" %></li>
+        <li><%= link_to t(".planes"), planes_path %></li>
         <% if logged_in? %>
         <li class="dropdown">
           <%= link_to t(".account_html"), "#", class: "dropdown-toggle", "data-toggle": "dropdown" %>
