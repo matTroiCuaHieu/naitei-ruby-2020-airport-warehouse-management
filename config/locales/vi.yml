@@ -74,3 +74,16 @@ vi:
       error_email_password_invalid: Invalid email/password combination
       remember_me: Remember me on this computer
       login_successfully: Login successfully!
+  locations:
+    index:
+      title: Location
+      order: Order
+      warehouse_name: Warehouse's Name
+      status: Status
+      plane: Plane
+      action: Action
+    location:
+      filled: Filled
+      empty: Empty
+      request: Request
+      title: "Yêu_cầu_chuyển_trạng_thái"
