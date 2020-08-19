@@ -13,7 +13,7 @@ en:
     header:
       warehouse: Airport Warehouse System
       home: Home
-      users: Users 
+      users: Users
       account_html: Account <b class="caret"></b>
       locations: Locations
       planes: Planes
@@ -28,6 +28,16 @@ en:
       new: News
       english: English
       vietnamese : Vietnamese
+  planes:
+    plane:
+      in_gara: in gara
+      change_ready: Change ready
+      change_gara: Change gara
+      number: Number
+      change_gara: Change_Gara
+      change_ready: Change_Ready
+    index:
+      title: Planes List
   static_pages:
     home:
       title: Home
