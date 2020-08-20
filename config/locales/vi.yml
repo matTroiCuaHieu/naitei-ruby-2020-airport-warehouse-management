@@ -1,5 +1,5 @@
 vi:
-  title: Hệ thống quản lý kho máy bay
+  title: HỆ THỐNG QUẢN LÍ KHO
   views:
     pagination:
       first: "&laquo; First"
@@ -9,76 +9,95 @@ vi:
       truncate: "&hellip;"
   layouts:
     application:
-      title: Airport Warehouse System
+      title: HỆ THỐNG QUẢN LÍ KHO SÂN BAY
     header:
-      warehouse: Airport Warehouse System
-      home: Home
-      users: Users
-      account_html: Account <b class="caret"></b>
-      locations: Vị trí Ô
+      warehouse: HỆ THỐNG QUẢN LÍ KHO SÂN BAY
+      home: Trang chủ
+      users: Người dùng
+      account_html: Tài khoản <b class="caret"></b>
+      locations: Khu máy bay
       planes: Máy bay
-      profile: Profile
-      settings: Settings
+      profile: Trang cá nhân
+      settings: Cài đặt
       logout: Log out
     footer:
-      content1_html: The %{href}
-      href_title1: "Airport Warehouse System"
+      content1_html: MỘT %{href}
+      href_title1: "HỆ THỐNG QUẢN LÍ KHO SÂN BAY "
       content2_html: by %{href}
       href_title2: "My team"
-      new: News
-      english: English
-      vietnamese : Vietnamese
+      new: Mới
+      english: Tiếng anh
+      vietnamese : Tiếng việt
+  planes:
+    plane:
+      in_gara: Khu sửa chữa
+      change_ready: Đổi trạng thái sẵn sàng
+      change_gara: Đổi trạng thái sửa chữa
+      number: Ô
+      change_gara: Yêu_cầu_vào_khu_sửa_chữa
+      change_ready: Yêu_cầu_vào_khu_sẵn_sàng_bay
+    index:
+      title: Danh sách máy bay
   static_pages:
     home:
-      title: Home
-      content_html: This is the home page for the %{href} sample application.
-      href_title: Ruby on Rails Tutorial
-      sign_up: Sign up now!
+      title: Trang chủ
+      sign_up: Tạo tài khoản!
   users:
-    sign_in: Sign In
+    sign_in: Đăng nhập
     new:
-      title: Sign Up
-      content: This will be a signup page for new users.
-      create_account: Create my account
+      title: Tạo tài khoản
+      content: Đây là trang đăng kí người dùng mới
+      create_account: Tạo tài khoản
     form:
-      name: Name
+      name: Tên
       email : Email
-      password: Password
-      password_confirmation: Password confirmation
+      password: Mật khẩu
+      password_confirmation: Xác nhận mật khẩu
     alert:
-      profile_updated: Profile updated!
-      please_login: Please log in!
-      user_deleted: User deleted!
-      profile_update_failed: Profile update failed!
-      user_not_found: User not found!
+      profile_updated: Cập nhật trang cá nhân
+      please_login: Vui lòng đăng nhập!
+      user_deleted: Xóa người dùng!
+      profile_update_failed: Không cập nhật được trang cá nhân!
+      user_not_found: Không tìm thấy người dùng!
     index:
-      title: All users
+      title: Danh sách người dùng
+      orderID: Order ID
+      name: Tên
+      location: Khu
+      roll: Role
+      action: Xóa
+    user:
+      you_sure: Bạn có chắc chắn xóa?
+      admin: Admin
+      manager: Quản lí
+      employee: Nhân viên
+      delete: Xóa
   shared:
-    the_form_contains:  The form contains
-    error: errors
-    welcome_to_the_sample_app: Welcome to the Sample App!
-    error_signup: Sign up error!
+    the_form_contains:  Nội dung form
+    error: lỗi
+    welcome_to_the_sample_app: Chào mừng đến với Warehouse Management System!
+    error_signup: Đăng kí lỗi!
   sessions:
     new:
-      title: Log in
-      login: Log in
-      new_user: New user?
-      signup_now: Sign up now!
+      title: Đăng nhập
+      login: Đăng nhập
+      new_user: Người dùng mới?
+      signup_now: Đăng kí ngay!
       email : Email
-      password: Password
-      error_email_password_invalid: Invalid email/password combination
-      remember_me: Remember me on this computer
-      login_successfully: Login successfully!
+      password: Mật khẩu
+      error_email_password_invalid: Sai email hoặc mật khẩu!
+      remember_me: Nhớ tài khoản này!
+      login_successfully: Đăng nhập thành công!
   locations:
     index:
-      title: Location
+      title: Khu
       order: Order
-      warehouse_name: Warehouse's Name
-      status: Status
-      plane: Plane
-      action: Action
+      warehouse_name: Tên khu
+      status: Trạng thái
+      plane: Máy bay
+      action: Hoạt động
     location:
-      filled: Filled
-      empty: Empty
-      request: Request
-      title: "Yêu_cầu_chuyển_trạng_thái"
+      filled: Đầy
+      empty: Trống
+      request: Yêu cầu
+      title: "Yêu_cầu_đổi_trạng_thái"

@@ -64,7 +64,7 @@ en:
       orderID: Order ID
       name: Name
       location: Location
-      roll: Roll
+      roll: Role
       action: Delete
     user:
       you_sure: You sure?
