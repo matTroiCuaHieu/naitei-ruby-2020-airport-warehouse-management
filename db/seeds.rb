@@ -1,5 +1,5 @@
-Warehouse.create!(name: "Kho Gara", area: "3 km2", amount: 100)
-Warehouse.create!(name: "Kho Ready", area: "5 km2", amount: 100)
+Warehouse.create!(name: "Khu sửa chữa", area: "3 km2", amount: 100)
+Warehouse.create!(name: "Khu ready", area: "5 km2", amount: 100)
 
 User.create!(name: "Radar's admin", email: "admin1@airport.org", password: "123456", password_confirmation: "123456",
   admin: true, activated: true, activated_at: Time.zone.now, warehouse_id: 1)
