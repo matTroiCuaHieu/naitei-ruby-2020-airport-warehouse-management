@@ -20,6 +20,8 @@ en:
       profile: Profile
       settings: Settings
       logout: Log out
+      en: EN
+      vi: VI
     footer:
       content1_html: The %{href}
       href_title1: "Airport Warehouse System"
@@ -64,7 +66,7 @@ en:
       orderID: Order ID
       name: Name
       location: Location
-      roll: Roll
+      roll: Role
       action: Delete
     user:
       you_sure: You sure?
