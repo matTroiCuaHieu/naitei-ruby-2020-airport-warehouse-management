@@ -173,7 +173,7 @@ input {
   border-bottom: 1px solid $gray-lighter;
   }
 }
-/* Roll*/
+/* Role*/
 .badge-admin {
   background-color: $success
 }
@@ -182,4 +182,35 @@ input {
 }
 .badge-employee{
   background-color: $primary
+}
+
+/*Alert*/
+.badge-counter{
+  position: absolute;
+  transform: scale(0.7);
+  transform-origin: top right;
+  right: .25rem;
+  margin-top: -.25rem;
+}
+.badge-danger {
+  background-color: $danger
+}
+ .dropdown-header {
+  background-color: #4e73df;
+  color: white;
+  margin: 0
+}
+.dropdown-menu hr {
+  margin: 0px;
+}
+.dropdown-menu {
+  padding-top: 0px;
+  min-width: 400px;
+}
+.dropdown-menu-item {
+  background-color: #EAEFF7;
+  padding: 7px
+}
+.dropdown-menu-seeall {
+  text-align: center;
 }

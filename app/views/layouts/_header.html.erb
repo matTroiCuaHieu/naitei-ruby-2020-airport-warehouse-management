@@ -8,6 +8,37 @@
         <li><%= link_to t(".locations"), locations_path %></li>
         <li><%= link_to t(".planes"), planes_path %></li>
         <% if logged_in? %>
+        <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-danger badge-counter">5+</span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  <%= t ".notifications" %>
+                </h6>
+                <hr>
+                <div class="dropdown-menu-item">
+                  <div class="small text-gray-500">December 12, 2019</div>
+                  <span class="font-weight-bold">Plane ABC245 want to change to radar warehouse. Request from Leonel Messi</span>
+                </div>
+                <hr>
+                <div class="dropdown-menu-item">
+                  <hr>
+                  <div class="small text-gray-500">December 12, 2019</div>
+                  <span class="font-weight-bold"><b>Plane ABC201</b> want to be change from <b>Radar warehouse</b> to <b>Ready warehouse</b>. Request from <b>Cristiano Ronaldo</b></span>
+                </div>
+                <hr>
+                <div class="dropdown-menu-item">
+                  <div class="small text-gray-500">December 12, 2019</div>
+                  <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                </div>
+                <hr>
+                <div class="dropdown-menu-seeall">
+                  <a href="#">See all notifications</a>
+                </div>
+              </div>
+            </li>
         <li class="dropdown">
           <%= link_to t(".account_html"), "#", class: "dropdown-toggle", "data-toggle": "dropdown" %>
           <ul class="dropdown-menu">
