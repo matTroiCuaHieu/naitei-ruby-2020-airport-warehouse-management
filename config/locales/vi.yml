@@ -20,6 +20,8 @@ vi:
       profile: Trang cá nhân
       settings: Cài đặt
       logout: Log out
+      en: EN
+      vi: VI
     footer:
       content1_html: MỘT %{href}
       href_title1: "HỆ THỐNG QUẢN LÍ KHO SÂN BAY "
