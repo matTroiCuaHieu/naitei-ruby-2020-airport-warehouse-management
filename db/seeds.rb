@@ -40,14 +40,20 @@ locations = Location.all
     plane.schedules.create(
       location: locations[n],
       time: Time.zone.now,
-      reason: "Need to Repair"
+      reason: "Need to Repair",
+      accept: true,
+      processing: false,
+      user_id: 1
     )
     plane.update_column :status, "in gara"
   else
     plane.schedules.create(
       location: locations[n],
       time: Time.zone.now,
-      reason: "Repaired"
+      reason: "Repaired",
+      accept: true,
+      processing: false,
+      user_id: 2
     )
     plane.update_column :status, "ready"
   end

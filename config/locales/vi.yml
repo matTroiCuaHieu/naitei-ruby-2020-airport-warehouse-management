@@ -38,8 +38,21 @@ vi:
       number: Ô
       change_gara: Yêu_cầu_vào_khu_sửa_chữa
       change_ready: Yêu_cầu_vào_khu_sẵn_sàng_bay
+      processing: Đang xử lý
+      add_fail: Tạo yêu cầu thất bại!
     index:
       title: Danh sách máy bay
+      add_success: Tạo yêu cầu thành công!
+  schedules:
+    new:
+      change: Chuyển máy bay số
+      into_gara: vào khu sửa chữa
+      reason: Vui lòng nhập lý do!
+      plane_number: Máy bay số
+      location: Ô thứ
+      Reason: Lý do
+      into_ready: vào khu ready
+      submit: Submit
   static_pages:
     home:
       title: Trang chủ
@@ -75,6 +88,9 @@ vi:
       employee: Nhân viên
       delete: Xóa
   shared:
+    error_messages:
+      alert: Have
+      error: errors
     the_form_contains:  Nội dung form
     error: lỗi
     welcome_to_the_sample_app: Chào mừng đến với Warehouse Management System!

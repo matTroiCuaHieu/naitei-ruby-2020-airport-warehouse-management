@@ -1,6 +1,8 @@
 class User < ApplicationRecord
-  belongs_to :warehouse
   USER_PARAMS = %i(name email password password_confirmation).freeze
+
+  belongs_to :warehouse
+  has_many :schedules, dependent: :destroy
 
   attr_accessor :remember_token
 

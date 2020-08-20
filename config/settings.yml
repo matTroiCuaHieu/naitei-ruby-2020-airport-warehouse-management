@@ -26,3 +26,16 @@ pagination: 15
 validate:
   user:
     password_minlength: 6
+condition:
+  true: "true"
+  false: "false"
+plane:
+  status:
+    ready: "Ready"
+warehouse:
+  gara: 1
+  ready: 2
+reason:
+  max_length: 100
+validation:
+  id : 0

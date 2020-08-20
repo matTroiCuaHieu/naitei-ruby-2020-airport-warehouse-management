@@ -38,8 +38,21 @@ en:
       number: Number
       change_gara: Change_Gara
       change_ready: Change_Ready
+      processing: Processing
+      add_fail: create request failed!
     index:
       title: Planes List
+      add_success: create request successfully!
+  schedules:
+    new:
+      change: Change plane number
+      into_gara: Into Warehouse Gara
+      reason: Please write reason!
+      plane_number: Plane's Number
+      location: Location
+      Reason: Reason
+      into_ready: Into Warehouse Ready
+      submit: Submit
   static_pages:
     home:
       title: Home
@@ -75,6 +88,9 @@ en:
       employee: Employee
       delete: Delete
   shared:
+    error_messages:
+      alert: Have
+      error: errors
     the_form_contains:  The form contains
     error: errors
     welcome_to_the_sample_app: Welcome to the Warehouse Management System!
