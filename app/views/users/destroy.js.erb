@@ -1,0 +1,11 @@
+$('.user_delete').bind('ajax:success', function() {
+  $(this).closest('tr').fadeOut();
+  $(this).addClass("haha")
+  $('tbody').has($(this)).addClass("haha")
+  $('.haha').remove()
+  $('.user_index').each(function( index ) {
+    let page = Math.ceil($('tbody').has($(this)).find(".user_index").html()/15)
+    $(this).html(index+ 1 +(page-1)*15)
+  })
+});
+$("#success").html("<%= escape_javascript(render :partial => 'shared/flash_toastr' , :locals => { :flash => flash }).html_safe %>");

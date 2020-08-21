@@ -11,7 +11,6 @@ require("jquery")
 import "bootstrap"
 require("./locations/location")
 import "./planes/plane"
-
 import toastr from 'toastr'
 window.toastr = toastr
 

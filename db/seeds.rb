@@ -16,7 +16,7 @@ warehouses = Warehouse.order(:created_at).take(2)
     manager: true, activated: true, activated_at: Time.zone.now) }
 end
 
-10.times do |n|
+30.times do |n|
   name = Faker::Name.name
   email = "employee#{n+1}@airport.org"
   password = "123456"
