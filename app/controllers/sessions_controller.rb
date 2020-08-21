@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by email: params[:session][:email].downcase
-    authenticated user
+    warehouse_member user
   end
 
   def destroy
@@ -12,6 +12,15 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def warehouse_member user
+    if user&.unit_id.eql? Settings.unit.wm
+      authenticated user
+    else
+      flash[:error] = t "sessions.new.user_not_warehouse"
+      render :new
+    end
+  end
 
   def authenticated user
     if user&.authenticate params[:session][:password]

@@ -10,7 +10,10 @@
       <th scope="col"><%= t ".name" %></th>
       <th scope="col"><%= t ".location" %></th>
       <th scope="col"><%= t ".roll" %></th>
-      <th scope="col"><%= t ".action" %></th>
+      <% if current_user.admin? %>
+        <th scope="col"><%= t ".action" %></th>
+      <% else %>
+      <% end %>
     </tr>
   </thead>
   <% @users.each_with_index do |user, index|%>

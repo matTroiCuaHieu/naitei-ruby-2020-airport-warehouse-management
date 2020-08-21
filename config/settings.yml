@@ -41,3 +41,5 @@ reason:
   max_length: 100
 validation:
   id : 0
+unit:
+  wm: 1
