@@ -1,0 +1,29 @@
+<% if params[:status].eql? Settings.plane.status.ready %>
+  <h1><%= t(".change") %> <%= params[:plane_id] || @plane_id %> <%= t(".into_gara") %></h1>
+  <%= form_for @schedule do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <%= f.hidden_field :plane_id, value: params[:plane_id] || @plane_id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.label :location_id, t(".location") %>
+    <%= f.collection_select :location_id, Location.gara_false, :id, :id_initial, {prompt: true}, {class: "form-control", required: "true"}%>
+    <%= f.label :reason, t(".Reason") %>
+    <div class="field">
+      <%= f.text_area :reason, placeholder: t(".reason"), required: "true" %>
+    </div>
+    <%= f.submit t(".submit"), class: "btn btn-primary" %>
+  <% end %>
+<% else %>
+  <h1><%= t(".change") %> <%= params[:plane_id] || @plane_id %> <%= t(".into_ready") %></h1>
+  <%= form_for @schedule do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <%= f.hidden_field :plane_id, value: params[:plane_id] || @plane_id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.label :location_id, t(".location") %>
+    <%= f.collection_select :location_id, Location.ready_false, :id, :id_initial, {prompt: true}, {class: "form-control", required: "true"}%>
+    <%= f.label :reason, t(".Reason") %>
+    <div class="field">
+      <%= f.text_area :reason, placeholder: t(".reason"), required: "true" %>
+    </div>
+    <%= f.submit t(".submit"), class: "btn btn-primary" %>
+  <% end %>
+<% end %>
