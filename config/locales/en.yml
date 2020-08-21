@@ -109,6 +109,7 @@ en:
       error_email_password_invalid: Invalid email/password!
       remember_me: Remember me on this computer
       login_successfully: Login successfully!
+      user_not_warehouse: User isn't WareHouse System!
   locations:
     index:
       title: Location
