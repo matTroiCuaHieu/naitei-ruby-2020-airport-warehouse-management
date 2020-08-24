@@ -1,0 +1,20 @@
+<% if @request.plane.ready? %>
+  <h1><%= t ".request" %> <%= @request.plane_id %> <%= t ".into_gara" %></h1>
+<% else %>
+  <h1><%= t ".request" %> <%= @request.plane_id %> <%= t ".into_ready" %></h1>
+<% end %>
+<div>
+  <h3><%= t ".requester" %>: <%= @request.user.name %></h3>
+  <h3><%= t ".plane_code" %>: <%= @request.plane_code %></h3>
+  <h3><%= t ".location" %>:  <%= @request.location_id %></h3>
+  <h3><%= t ".reason" %>: <%= @request.reason %></h3>
+  <h3><%= t ".status" %>:
+  <% if @request.process? %>
+    <%= t ".processing" %>
+  <% elsif @request.accepted? %>
+    <%= t ".accepted" %>
+  <% else %>
+    <%= t".denied" %>
+  <% end %>
+  <h3>
+</div>

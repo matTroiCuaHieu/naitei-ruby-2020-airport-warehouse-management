@@ -1,0 +1,22 @@
+<% if @request.plane.ready? %>
+  <h1><%= t ".edit_request" %> <%= @request.plane_id %> <%= t ".into_gara" %></h1>
+<% else %>
+  <h1><%= t ".edit_request" %> <%= @request.plane_id %> <%= t ".into_ready" %></h1>
+<% end %>
+<%= form_for @request do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.hidden_field :plane_id, value: @request.plane_id %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <h3><%= t ".plane_code" %> : <%= @request.plane_code %></h3>
+  <%= f.label :location_id, t(".location") %>
+  <% if @request.plane.ready? %>
+    <%= f.collection_select :location_id, Location.location_false.gara_false, :id, :id_initial, {prompt: true}, {class: "form-control", required: "true"} %>
+  <% else %>
+    <%= f.collection_select :location_id, Location.location_false.ready_false, :id, :id_initial, {prompt: true}, {class: "form-control", required: "true"} %>
+  <% end %>
+  <%= f.label :reason, t("._reason") %>
+  <div class="field">
+    <%= f.text_area :reason, placeholder: t(".reason"), required: "true" %>
+  </div>
+  <%= f.submit t(".update"), class: "btn btn-primary" %>
+<% end %>

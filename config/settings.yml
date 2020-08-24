@@ -43,3 +43,8 @@ validation:
   id : 0
 unit:
   wm: 1
+request:
+  referrer:
+    planes: "planes"
+    requests: "requests"
+    new: "new"

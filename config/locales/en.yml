@@ -17,6 +17,7 @@ en:
       account_html: Account <b class="caret"></b>
       locations: Locations
       planes: Planes
+      requests: Requests
       profile: Profile
       settings: Settings
       logout: Log out
@@ -40,23 +41,86 @@ en:
       change_ready: Change_Ready
       processing: Processing
       add_fail: create request failed!
+      you_sure: You sure?
+      edit_request: Edit_request
+      delete_request: Delete_request
+      requesting: An_others_are_requesting
+      accepted: Accepted
+      click_create_request: Click_to_create_request
+      no_request: No request
     index:
       title: Planes List
       add_success: create request successfully!
-  schedules:
+      edit_success: Edit request successfully!
+      delete_success: Delete request successfully!
+      delete_failed: Delete request failed!
+  requests:
+    index:
+      title: Requests List
+      requester: Requester
+      plane_code: Plane's Code
+      location: Location
+      status: Status
+      action: Action
+      edit_success: Edit request successfully!
+      delete_success: Delete request successfully!
+      delete_failed: Delete request failed!
+      create_request: Create_request
+      processing: Processing
+      accepted: Accepted
+      rejected: Rejected
+      edit_request: Edit_request
+      you_sure: You sure?
+      delete_request: Delete_request
+      requesting: An_others_are_requesting
+      see_request: See_request
+    request:
+      processing: Processing
+      accepted: Accepted
+      rejected: Rejected
+      edit_request: Edit_request
+      you_sure: You sure?
+      delete_request: Delete_request
+      requesting: An_others_are_requesting
+      see_request: See_request
     new:
       change: Change plane number
       into_gara: Into Warehouse Gara
       reason: Please write reason!
       plane_number: Plane's Number
       location: Location
-      Reason: Reason
+      _reason: Reason
       into_ready: Into Warehouse Ready
       submit: Submit
+      _create_request: Create request
+      plane_id: Plane's number
+    show:
+      request: Request change plane number
+      into_gara: Into Warehouse Gara
+      into_ready: Into Warehouse Ready
+      requester: Requester
+      plane_code: Plane's Code
+      location: Location
+      reason: Reason
+      status: Status
+      processing: Processing
+      accepted: Accepted
+      denied: Denied
+    edit:
+      edit_request: Edit request change plane number
+      into_gara: Into Warehouse Gara
+      into_ready: Into Warehouse Ready
+      plane_code: Plane's Code
+      location: Location
+      _reason: Reason
+      reason: Please write reason!
+      update: Update
+      edit_fail: Edit request failed!
   static_pages:
     home:
       title: Home
       sign_up: Sign up now!
+      not_found_request: request not found
   users:
     sign_in: Sign In
     new:

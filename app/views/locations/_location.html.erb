@@ -2,9 +2,9 @@
   <tr>
     <td><%= link_to "Number #{location.id}", "#" %></td>
     <td><%= location.warehouse_name %></td>
-    <% if location.filled && location.schedules %>
+    <% if location.filled && location.requests %>
       <td><%=t ".filled" %></td>
-      <td><%= link_to location.schedules.last.plane_code, "#" %></td>
+      <td><%= link_to location.requests.last.plane_code, "#" %></td>
     <% else %>
       <td><%=t ".empty" %></td>
       <td><%=t ".empty" %></td>

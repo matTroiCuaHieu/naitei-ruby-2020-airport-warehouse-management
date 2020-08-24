@@ -1,0 +1,68 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".title" %></h1>
+
+<table class="table table-hover" id="table-request">
+  <div class="create-request">
+    <%= link_to new_request_path locale do %>
+      <button type="button" class="btn float-right btn-primary my-hover" data-toggle="tooltip" data-placement="right" title=<%= t ".create_request" %> ><i class="fa fa-plus"></i></button>
+    <% end %>
+  </div>
+  <thead>
+    <tr>
+      <th scope="col"><%= t ".order_id" %></th>
+      <th scope="col"><%= t ".plane_code" %></th>
+      <th scope="col"><%= t ".location" %></th>
+      <th scope="col"><%= t ".requester" %></th>
+      <th scope="col"><%= t ".status" %></th>
+      <th scope="col"><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <% @requests.each_with_index do |request, index| %>
+  <tbody>
+    <tr>
+      <td class ="request_index"><%= index + 1 + (@page - 1)*Settings.pagination.user_page %></td>
+      <td><%= link_to request.plane_code, "#" %></td>
+      <td><%= request.location_id %></td>
+      <td><%= request.user_name %></td>
+      <td>
+        <% if request.process? %>
+          <%= link_to request do %>
+            <span class="label label-info fa-1x"><%=t ".processing" %></span>
+          <% end %>
+        <% else %>
+          <% if request.accepted? %>
+            <%= link_to request do %>
+              <span class="label label-success fa-1x"><%=t ".accepted" %></span>
+            <% end %>
+          <% else %>
+            <%= link_to request do %>
+              <span class="label label-success fa-1x"><%=t ".rejected" %></span>
+            <% end %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>
+        <% if request.process? %>
+          <% if current_user? request.user %>
+            <%= link_to edit_request_path request do %>
+              <button type="button" class="btn btn-warning btn-sm" data-toggle="tooltip" data-placement="right" title=<%= t ".edit_request" %> ><i class="fa fa-edit"></i></button>
+            <% end %>
+            <%= link_to request, method: :delete, data: { confirm: t(".you_sure") } do %>
+              <button type="button" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="right" title = <%= t ".delete_request" %>><i class="fas fa-trash-alt"></i></button>
+            <% end %>
+          <% else %>
+            <%= link_to request do %>
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title=<%= t ".requesting" %>><i class="fa fa-eye"></i></button>
+            <% end %>
+          <% end %>
+        <% else %>
+          <%= link_to request do %>
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="right" title=<%= t ".see_request" %>><i class="fa fa-eye"></i></button>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
+<%= paginate @requests, theme: "twitter-bootstrap-4" %>
