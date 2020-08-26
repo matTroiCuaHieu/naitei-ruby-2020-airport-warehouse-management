@@ -1,5 +1,7 @@
-class Schedule < ApplicationRecord
-  SCHEDULES_PARAMS = %i(plane_id location_id user_id reason).freeze
+class Request < ApplicationRecord
+  REQUESTS_PARAMS = %i(plane_id location_id user_id reason).freeze
+
+  enum status: {process: "processing", accepted: "accepted", denied: "denied"}
 
   belongs_to :location
   belongs_to :plane
@@ -19,4 +21,5 @@ class Schedule < ApplicationRecord
     length: {maximum: Settings.reason.max_length}
 
   delegate :code, to: :plane, prefix: true, allow_nil: true
+  delegate :name, to: :user, prefix: true, allow_nil: true
 end

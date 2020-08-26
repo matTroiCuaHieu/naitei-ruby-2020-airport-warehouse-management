@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   belongs_to :warehouse
   belongs_to :unit
-  has_many :schedules, dependent: :destroy
+  has_many :requests, dependent: :destroy
 
   attr_accessor :remember_token
 

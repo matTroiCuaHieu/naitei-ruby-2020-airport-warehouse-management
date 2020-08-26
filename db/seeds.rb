@@ -40,7 +40,7 @@ locations = Location.all
 
   locations[n].update_column :filled, true
   if locations[n].warehouse_id == 1
-    plane.schedules.create(
+    plane.requests.create(
       location: locations[n],
       time: Time.zone.now,
       reason: "Need to Repair",
@@ -50,7 +50,7 @@ locations = Location.all
     )
     plane.update_column :status, "in gara"
   else
-    plane.schedules.create(
+    plane.requests.create(
       location: locations[n],
       time: Time.zone.now,
       reason: "Repaired",
@@ -67,7 +67,7 @@ ACCESSORIES = %w[wheels wings screws Gears]
   Component.create!(name: ACCESSORIES.pop, amount: 1000)
 end
 
-History.create!(schedule_id: 1, component_id: 1, amount: 2, time: Time.zone.now, reason: "Bug in Gears")
+History.create!(request_id: 1, component_id: 1, amount: 2, time: Time.zone.now, reason: "Bug in Gears")
 component = Component.find_by id: 1
 temp = component.amount - 2
 component.update_column :amount, temp

@@ -1,5 +1,9 @@
 class Plane < ApplicationRecord
-  has_many :schedules, dependent: :destroy
-  has_many :locations, through: :schedules
-  enum status: {Gara: "in gara", Ready: "ready"}
+  has_many :requests, dependent: :destroy
+  has_many :locations, through: :requests
+  enum status: {rara: "in gara", ready: "ready"}
+
+  def id_initial
+    id.to_s
+  end
 end

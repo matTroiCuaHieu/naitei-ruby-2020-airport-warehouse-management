@@ -1,4 +1,4 @@
 class History < ApplicationRecord
-  belongs_to :schedule
+  belongs_to :request
   belongs_to :component
 end

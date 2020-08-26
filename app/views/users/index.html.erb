@@ -31,13 +31,16 @@
             <span class="badge badge-employee"><%= t ".employee" %></span>
           <% end %>
         </td>
-        <td style = "padding-left: 25px">
-          <% if current_user.admin? && !current_user?(user) %>
-            <%= link_to user, method: :delete, data: { confirm: t(".you_sure") }, :remote => "true", :class => 'user_delete' do %>
-              <i class="fas fa-trash-alt fa-1x "data-toggle="tooltip" data-html="true" title=<%= t(".delete")%>></i>
+        <% if current_user.admin? %>
+          <td>
+            <% unless user.admin? %>
+              <%= link_to user, method: :delete, data: { confirm: t(".you_sure") } do %>
+                <i class="fas fa-trash-alt fa-1x "data-toggle="tooltip" data-html="true" title=<%= t(".delete") %>></i>
+              <% end %>
+            <% else %>
             <% end %>
-          <% end %>
-        </td>
+          </td>
+        <% end %>
       </tr>
     </tbody>
   <% end %>

@@ -10,6 +10,7 @@
           <li><%= link_to t(".users"), users_path, id: "navbar-content"%></li>
           <li><%= link_to t(".locations"), locations_path, id: "navbar-content" %></li>
           <li><%= link_to t(".planes"), planes_path, id: "navbar-content" %></li>
+          <li><%= link_to t(".requests"), requests_path, id: "navbar-content" %></li>
           <li class="dropdown">
             <%= link_to t(".account_html"), "#", class: "dropdown-toggle", "data-toggle": "dropdown", id: "navbar-content" %>
             <ul class="dropdown-menu">
@@ -23,8 +24,8 @@
         <% else %>
         <li><%= link_to t("users.sign_in"), login_path, id: "navbar-content" %></li>
         <% end %>
-        <li style="margin-right: -20px"><%= link_to t(".en"), locale: :en %></li>
-        <li style="margin-right: -50px"><%= link_to t(".vi"), locale: :vi %></li>
+        <li class="en" ><%= link_to t(".en"), locale: :en %></li>
+        <li class="vi" ><%= link_to t(".vi"), locale: :vi %></li>
       </ul>
     </nav>
   </div>

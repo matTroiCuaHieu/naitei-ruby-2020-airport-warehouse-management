@@ -1,5 +1,5 @@
 <% provide :title, t(".title") %>
-<h1><%= t ".title"%></h1>
+<h1><%= t ".title" %></h1>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -8,11 +8,8 @@
       <th scope="col"><%= t ".status" %></th>
       <th scope="col"><%= t ".locaion" %></th>
       <th scope="col"><%= t ".request" %></th>
-      <th scope="col"><%= t ".action" %></th>
     </tr>
   </thead>
   <%= render @planes %>
 </table>
-<div class="col-md-6 col-md-offset-5">
-  <%= paginate @planes, theme: "twitter-bootstrap-4" %>
-</div>
+<%= paginate @planes, theme: "twitter-bootstrap-4" %>

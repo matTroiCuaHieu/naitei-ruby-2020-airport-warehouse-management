@@ -17,6 +17,7 @@ vi:
       account_html: Tài khoản <b class="caret"></b>
       locations: Khu máy bay
       planes: Máy bay
+      requests: Yêu cầu
       profile: Trang cá nhân
       settings: Cài đặt
       logout: Log out
@@ -40,23 +41,86 @@ vi:
       change_ready: Yêu_cầu_vào_khu_sẵn_sàng_bay
       processing: Đang xử lý
       add_fail: Tạo yêu cầu thất bại!
+      you_sure: Bạn chắc chứ?
+      edit_request: Sửa_yêu_cầu
+      delete_request: Xóa_yêu_cầu
+      requesting: Một_người_khác_đang_yêu_cầu
+      accepted: Đã được đồng ý
+      click_create_request: Click_to_create_request
+      no_request: No request
     index:
       title: Danh sách máy bay
       add_success: Tạo yêu cầu thành công!
-  schedules:
+      edit_success: Sửa yêu cầu thành công
+      delete_success: Xóa yêu cầu thành công!
+      delete_failed: Xóa yêu cầu thất bại!
+  requests:
+    index:
+      title: Danh sách yêu cầu
+      requester: Người yêu cầu
+      plane_code: Mã máy bay
+      location: Ô thứ
+      status: Trạng thái
+      action: Hoạt động
+      edit_success: Sửa yêu cầu thành công!
+      delete_success: Xóa yêu cầu thành công!
+      delete_failed: Xóa yêu cầu thất bại!
+      create_request: Tạo_yêu_cầu
+      processing: Đang xử lý
+      accepted: Đã được đồng ý
+      rejected: Đã bị từ chối
+      edit_request: Sửa_yêu_cầu
+      you_sure: Bạn chắc chứ?
+      delete_request: Xóa_yêu_cầu
+      requesting: Một_người_khác_đang_yêu_cầu
+      see_request: Xem_yêu_cầu
+    request:
+      processing: Đang xử lý
+      accepted: Đã được đồng ý
+      rejected: Đã bị từ chối
+      edit_request: Sửa_yêu_cầu
+      you_sure: Bạn chắc chứ?
+      delete_request: Xóa_yêu_cầu
+      requesting: Một_người_khác_đang_yêu_cầu
+      see_request: Xem_yêu_cầu
     new:
       change: Chuyển máy bay số
       into_gara: vào khu sửa chữa
       reason: Vui lòng nhập lý do!
       plane_number: Máy bay số
       location: Ô thứ
-      Reason: Lý do
+      _reason: Lý do
       into_ready: vào khu ready
       submit: Submit
+      _create_request: Tạo yêu cầu
+      plane_id: Máy bay số
+    show:
+      request: Yêu cầu chuyển máy bay số
+      into_gara: vào khu sửa chữa
+      into_ready: vào khu ready
+      requester: Người yêu cầu
+      plane_code: Mã máy bay
+      location: Ô thứ
+      reason: Lý do
+      status: Trạng thái
+      processing: Đang xử lý
+      accepted: Đã được chấp nhận
+      denied: Đã bị từ chối
+    edit:
+      edit_request: Sửa yêu cầu chuyển máy bay số
+      into_gara: vào khu sửa chữa
+      into_ready: vào khu Ready
+      plane_code: Mã máy bay
+      location: Ô thứ
+      _reason: Lý do
+      reason: Vui lòng viết lý do!
+      update: Update
+      edit_fail: Sửa yêu cầu thất bại!
   static_pages:
     home:
       title: Trang chủ
       sign_up: Tạo tài khoản!
+      not_found_request: request không tìm thấy
   users:
     sign_in: Đăng nhập
     new:
