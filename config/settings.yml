@@ -49,3 +49,4 @@ request:
     planes: "planes"
     requests: "requests"
     new: "new"
+    create: "create"
