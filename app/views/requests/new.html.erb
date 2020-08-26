@@ -28,7 +28,7 @@
       <%= f.submit t(".submit"), class: "btn btn-primary" %>
     <% end %>
   <% end %>
-<% elsif request.referrer.include? Settings.request.referrer.requests %>
+<% else %>
   <h1><%= t "._create_request" %></h1>
   <%= form_for @request do |f| %>
     <%= render "shared/error_messages", object: f.object %>
