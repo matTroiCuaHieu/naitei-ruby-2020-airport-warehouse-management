@@ -1,0 +1,13 @@
+<%= form_for request do |f| %>
+<%= render "shared/error_messages", object: f.object %>
+<%= f.hidden_field :plane_id, value: request.plane_id %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+<%= f.hidden_field :reason, value: current_user.id %>
+<%= f.hidden_field :status, value: current_user.id %>
+<%= f.hidden_field :approver, value: current_user.id %>
+<%= f.label :deny_reason, "deny_reason" %>
+<div class="field">
+<%= f.text_area :reason, placeholder: t(".reason"), required: "true" %>
+</div>
+<%= f.submit t(".update"), class: "btn btn-primary" %>
+<% end %>

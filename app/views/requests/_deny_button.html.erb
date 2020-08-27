@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-danger btn-sm" data-toggle="modal"data-target="#myModal" ><%= t ".deny" %></i></button>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"> <%= t ".deny_reason" %> </h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag request_path(request, status: Settings.request.status.denied), method: :patch do |f| %>
+          <%= text_field_tag :deny_reason,"", :class => "textfield-deny-reason" %>
+          <p><%= submit_tag("Submit",:class => "btn btn-success btn-reason-submit" ) %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

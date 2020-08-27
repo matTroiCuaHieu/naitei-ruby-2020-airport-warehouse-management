@@ -34,7 +34,9 @@ condition:
   false: "false"
 plane:
   status:
-    ready: "Ready"
+    ready: "ready"
+    gara: "in gara"
+    gara_: "gara"
 warehouse:
   gara: 1
   ready: 2
@@ -48,5 +50,8 @@ request:
   referrer:
     planes: "planes"
     requests: "requests"
+    locations: "locations"
     new: "new"
-    create: "create"
+  status:
+    accepted: "accepted"
+    denied: "denied"

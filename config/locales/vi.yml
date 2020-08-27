@@ -74,6 +74,12 @@ vi:
       delete_request: Xóa_yêu_cầu
       requesting: Một_người_khác_đang_yêu_cầu
       see_request: Xem_yêu_cầu
+      accept_request: Chấp_nhận_yêu_cầu
+      deny_request: Từ_chối_yêu_cầu
+      accept_success: Chấp nhận yêu cầu thành công!
+      accept_fail: Chấp nhận yêu cầu thất bại!
+      deny_success: Từ chối yêu cầu thanh công!
+      deny_fail: Từ chối yêu cầu thất bại!
     request:
       processing: Đang xử lý
       accepted: Đã được đồng ý
@@ -116,6 +122,9 @@ vi:
       reason: Vui lòng viết lý do!
       update: Update
       edit_fail: Sửa yêu cầu thất bại!
+    deny_button:
+      deny_request: Từ_chối_yêu_cầu!
+      deny_reason: Vui lòng nhập lý do từ chối yêu cầu
   static_pages:
     home:
       title: Trang chủ
@@ -172,14 +181,18 @@ vi:
       user_not_warehouse: Không phải thành viên của WareHoue
   locations:
     index:
-      title: Khu
+      title: Danh sách ô chứa máy bay
       order: Order
       warehouse_name: Tên khu
-      status: Trạng thái
-      plane: Máy bay
-      action: Hoạt động
-    location:
-      filled: Đầy
-      empty: Trống
-      request: Yêu cầu
-      title: "Yêu_cầu_đổi_trạng_thái"
+      request: tạo_yêu_cầu
+      status:
+        filled: ABC0123
+        empty: Trống
+      location_name:
+        ready: Ready-01
+        gara: Gara-01
+  icon:
+    booking:
+      empty_html: <i class="far fa-calendar-plus fa-2x"></i>
+      filled_html: <i class="far fa-calendar-check fa-2x"></i>
+

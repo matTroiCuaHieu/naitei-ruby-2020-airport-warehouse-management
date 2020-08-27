@@ -74,6 +74,12 @@ en:
       delete_request: Delete_request
       requesting: An_others_are_requesting
       see_request: See_request
+      accept_request: Accept_request
+      deny_request: Deny_request
+      accept_success: accept request successfully!
+      accept_fail:  accept request failed!
+      deny_success: deny request successfully!
+      deny_fail: deny request failed!
     request:
       processing: Processing
       accepted: Accepted
@@ -116,6 +122,9 @@ en:
       reason: Please write reason!
       update: Update
       edit_fail: Edit request failed!
+    deny_button:
+      deny_request: deny_request
+      deny_reason: Please write deny reason!
   static_pages:
     home:
       title: Home
@@ -176,7 +185,7 @@ en:
       user_not_warehouse: User isn't WareHouse System!
   locations:
     index:
-      title: Location
+      title: List locations
       order: Order
       warehouse_name: Warehouse's Name
       request: Create_request
