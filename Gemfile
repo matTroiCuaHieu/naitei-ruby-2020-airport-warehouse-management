@@ -18,6 +18,7 @@ gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap4-kaminari-views", "~> 1.0.1"
 gem "bootstrap-sass", "3.4.1"
 gem "config"
+gem "figaro"
 gem "jquery-rails", "4.3.1"
 gem "kaminari", "~> 1.2.1"
 gem "rails-i18n"
@@ -37,7 +38,10 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
+  gem "database_cleaner-active_record"
   gem "selenium-webdriver"
+  gem "shoulda-matchers"
+  gem "simplecov", require: false
   gem "webdrivers"
 end
 
