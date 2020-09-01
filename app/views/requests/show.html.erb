@@ -1,20 +1,62 @@
-<% if @request.plane.ready? %>
-  <h1><%= t ".request" %> <%= @request.plane_id %> <%= t ".into_gara" %></h1>
-<% else %>
-  <h1><%= t ".request" %> <%= @request.plane_id %> <%= t ".into_ready" %></h1>
-<% end %>
-<div>
-  <h3><%= t ".requester" %>: <%= @request.user.name %></h3>
-  <h3><%= t ".plane_code" %>: <%= @request.plane_code %></h3>
-  <h3><%= t ".location" %>:  <%= @request.location_id %></h3>
-  <h3><%= t ".reason" %>: <%= @request.reason %></h3>
-  <h3><%= t ".status" %>:
-  <% if @request.process? %>
-    <%= t ".processing" %>
-  <% elsif @request.accepted? %>
-    <%= t ".accepted" %>
-  <% else %>
-    <%= t".denied" %>
-  <% end %>
-  <h3>
+<div class="request-show">
+  <div class="request-show-header">
+    <% if @request.plane.ready? %>
+      <h1><%= t ".request" %> <%= @request.plane_id %> <%= t ".into_gara" %></h1>
+    <% else %>
+      <h1><%= t ".request" %> <%= @request.plane_id %> <%= t ".into_ready" %></h1>
+    <% end %>
+  </div>
+  <div class="request-show-body">
+    <h4 class="request-show-item-title">
+      <span><b ><%= t ".requester" %>:</b></span>
+      <span class="request-show-content"><%= @request.user.name %></span>
+    </h4><hr>
+    <h4 class="request-show-item-title">
+      <b><%= t ".plane_code" %>:</b>
+      <span class="request-show-content"><%= @request.plane_code %></span>
+    </h4><hr>
+    <h4 class="request-show-item-title">
+      <b><%= t ".location" %>:</b>
+      <span class="request-show-content"><%= @request.location_id %></span>
+    </h4><hr>
+    <h4 class="request-show-item-title">
+      <b><%= t ".reason" %>:</b>
+      <span class="request-show-content"><%= @request.reason %></span>
+    </h4><hr>
+    <h4 class="request-show-item-title">
+      <b><%= t ".status" %>:</b>
+      <% if @request.process? %>
+        <span class="label label-info fa-1x request-show-content"><%=t ".processing" %></span>
+      <% elsif @request.accepted? %>
+        <span class="label label-success fa-1x request-show-content"><%=t ".accepted" %></span>
+      <% else %>
+        <span class="label label-danger fa-1x request-show-content"><%=t ".denied" %></span>
+      <% end %>
+    </h4><hr>
+    <% if @request.accepted? %>
+      <h4 class="request-show-item-title">
+        <b><%= t ".approver" %>:</b>
+        <span class="request-show-content"><%= @request.approver %></span>
+      </h4><hr>
+    <% elsif @request.denied? %>
+      <h4 class="request-show-item-title">
+        <b><%= t ".deny_reason" %>:</b>
+        <span class="request-show-content"><%= @request.deny_reason %></span>
+      </h4><hr>
+      <h4 class="request-show-item-title">
+        <b><%= t ".approver" %>:</b>
+        <span class="request-show-content"><%= @request.approver %></span>
+      </h4><hr>
+    <% end %>
+  </div>
+  <div class="request-show-button">
+    <% if @request.process? %>
+      <% if current_user.manager? %>
+        <%= render "deny_button", request: @request %>
+        <%= link_to request_path(@request, status: Settings.request.status.accepted), method: :patch do %>
+          <button type="button" class="btn btn-success btn-sm"data-placement="right"><%= t ".accept" %></button>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>

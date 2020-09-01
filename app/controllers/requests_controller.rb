@@ -38,12 +38,10 @@ class RequestsController < ApplicationController
   def edit; end
 
   def update
-    if @request.update request_params
-      flash[:success] = t "requests.index.edit_success"
-      redirect_to requests_path
+    if current_user.manager?
+      manager_update
     else
-      flash[:error] = t "requests.edit.edit_fail"
-      render :edit
+      user_update
     end
   end
 
@@ -70,7 +68,33 @@ class RequestsController < ApplicationController
     @request = Request.find_by id: params.require(:id)
     return if @request
 
-    flash[:error] = "static_pages.home.not_found_request"
+    flash[:error] = t "static_pages.home.not_found_request"
     redirect_to root_url
+  end
+
+  def update_if_deny
+    @request.update!(status: Settings.request.status.denied,
+        approver: current_user.name, deny_reason: params[:deny_reason])
+  end
+
+  def manager_update
+    if params[:status].eql? Settings.request.status.accepted
+      @request.update_value? @request, current_user
+      flash[:success] = t "requests.index.accept_success"
+    else
+      update_if_deny
+      flash[:success] = t "requests.index.deny_success"
+    end
+    redirect_to @request
+  end
+
+  def user_update
+    if @request.update request_params
+      flash[:success] = t "requests.index.edit_success"
+      redirect_to requests_path
+    else
+      flash[:error] = t "requests.edit.edit_fail"
+      render :edit
+    end
   end
 end

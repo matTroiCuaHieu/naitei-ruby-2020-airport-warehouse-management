@@ -46,6 +46,7 @@ locations = Location.all
       reason: "Need to Repair",
       accept: true,
       processing: false,
+      status: "accepted",
       user_id: 1
     )
     plane.update_column :status, "in gara"

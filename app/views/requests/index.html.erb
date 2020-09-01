@@ -27,16 +27,16 @@
       <td>
         <% if request.process? %>
           <%= link_to request do %>
-            <span class="label label-info fa-1x"><%=t ".processing" %></span>
+            <span class="label label-info fa-1x"><%= t ".processing" %></span>
           <% end %>
         <% else %>
           <% if request.accepted? %>
             <%= link_to request do %>
-              <span class="label label-success fa-1x"><%=t ".accepted" %></span>
+              <span class="label label-success fa-1x"><%= t ".accepted" %></span>
             <% end %>
           <% else %>
             <%= link_to request do %>
-              <span class="label label-success fa-1x"><%=t ".rejected" %></span>
+              <span class="label label-default fa-1x"><%= t ".rejected" %></span>
             <% end %>
           <% end %>
         <% end %>

@@ -34,8 +34,8 @@
         <% if current_user.admin? %>
           <td>
             <% unless user.admin? %>
-              <%= link_to user, method: :delete, data: { confirm: t(".you_sure") } do %>
-                <i class="fas fa-trash-alt fa-1x "data-toggle="tooltip" data-html="true" title=<%= t(".delete") %>></i>
+              <%= link_to user, method: :delete, data: { confirm: t(".you_sure") }, :remote => "true", :class => "user_delete" do %>
+                <i class="fas fa-trash-alt fa-1x "data-toggle="tooltip" data-html="true" title=<%= t ".delete" %>></i>
               <% end %>
             <% else %>
             <% end %>

@@ -34,8 +34,8 @@
                 <div><%= location.requests.last.plane_code %></div>
               </div>
               <div class="col-sm-4 table-item-action">
-                <%= link_to new_request_path do %>
-                  <i class="far fa-calendar-plus fa-2x" data-toggle="tooltip" data-placement = "top" title= <%= t(".request") %>></i>
+                <%= link_to new_request_path locale, plane_id: location.requests.where(status: "accepted").last.plane_id, status: location.requests.where(status: "accepted").last.plane.status do %>
+                  <i class="far fa-calendar-plus fa-2x" data-toggle="tooltip" data-placement = "top" title= <%= t ".request" %>></i>
                 <% end %>
               </div>
           </div>
@@ -50,8 +50,8 @@
                 <div><%= t ".status.empty" %></div>
               </div>
               <div class="col-sm-4 table-item-action">
-                <%= link_to new_request_path do %>
-                  <i class="far fa-calendar-plus fa-2x" data-toggle="tooltip" data-placement = "top" title= <%= t(".request") %>></i>
+                <%= link_to new_request_path locale, location_id: location.id do %>
+                  <i class="far fa-calendar-plus fa-2x" data-toggle="tooltip" data-placement = "top" title= <%= t ".request" %>></i>
                 <% end %>
               </div>
           </div>
