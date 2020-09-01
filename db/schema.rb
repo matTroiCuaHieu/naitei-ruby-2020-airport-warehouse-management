@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_08_28_065602) do
 
-  create_table "components", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "components", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.bigint "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.bigint "amount"
     t.datetime "time"
     t.text "reason"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_065602) do
     t.index ["schedule_id"], name: "index_histories_on_schedule_id"
   end
 
-  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.boolean "filled"
     t.bigint "warehouse_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -40,14 +40,14 @@ ActiveRecord::Schema.define(version: 2020_08_28_065602) do
     t.index ["warehouse_id"], name: "index_locations_on_warehouse_id"
   end
 
-  create_table "planes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "planes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.string "code"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.datetime "time"
     t.text "reason"
     t.bigint "location_id", null: false
@@ -65,14 +65,14 @@ ActiveRecord::Schema.define(version: 2020_08_28_065602) do
     t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
-  create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "units", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_065602) do
     t.index ["warehouse_id"], name: "index_users_on_warehouse_id"
   end
 
-  create_table "warehouses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "warehouses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
     t.string "area"
     t.bigint "amount"
