@@ -10,6 +10,13 @@ en:
   layouts:
     application:
       title: Airport Warehouse System
+    notification:
+        want_to_be_change_from: want to be change from
+        request_from: . Request from
+        to: to
+        repair: Repair Area
+        ready: Ready Area
+        9+: 9+
     header:
       warehouse: Airport Warehouse System
       home: Home

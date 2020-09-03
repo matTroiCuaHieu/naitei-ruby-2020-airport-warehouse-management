@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   before_action :set_locale
-
+  @request_process = Request.process
   private
 
   def set_locale

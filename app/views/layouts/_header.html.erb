@@ -11,6 +11,7 @@
           <li><%= link_to t(".locations"), locations_path, id: "navbar-content" %></li>
           <li><%= link_to t(".planes"), planes_path, id: "navbar-content" %></li>
           <li><%= link_to t(".requests"), requests_path, id: "navbar-content" %></li>
+          <%= render "layouts/notification"%>
           <li class="dropdown">
             <%= link_to t(".account_html"), "#", class: "dropdown-toggle", "data-toggle": "dropdown", id: "navbar-content" %>
             <ul class="dropdown-menu">
